@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AppMain">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="225dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="93dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textview3242"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이름 : "
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/teixfdsa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="나이 :"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="성별 : "
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="148dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nametag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/ageoutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/checkbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toTopOf="@+id/weightcheck"
+        app:layout_constraintEnd_toStartOf="@+id/calendarbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/analysis" />
+
+    <ImageButton
+        android:id="@+id/calendarbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toTopOf="@+id/kcalcheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkbutton"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/calendar" />
+
+    <ImageButton
+        android:id="@+id/weightcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="180dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/kcalcheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbutton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/scale" />
+
+    <ImageButton
+        android:id="@+id/kcalcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="180dp"
+        android:background="#00ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weightcheck"
+        app:layout_constraintTop_toBottomOf="@+id/calendarbutton"
+        app:srcCompat="@drawable/dish" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
