@@ -46,8 +46,8 @@ class AppMain : AppCompatActivity() {
 
         }
         calendarbutton.setOnClickListener{
-
-            
+            val intent = Intent(this, CalendarActivity::class.java)
+            startActivity(intent)
         }
         kcalcheck.setOnClickListener{
             val intent = Intent(this, KcalCheck::class.java)

@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_bmicoculator.*
+
 
 
 class bmicoculator : AppCompatActivity() {
@@ -16,7 +18,20 @@ class bmicoculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmicoculator)
+        loadData()
+        if(!nametext.text.isEmpty() && !ageText.text.isEmpty() && !heightinput.text.isEmpty() && !weighttag.text.isEmpty() && !gendertext.text.isEmpty()){
+            var gender : String? = gendertext.text.toString()
+            var name: String? = nametext.text.toString()
+            var age : String? = ageText.text.toString()
 
+            var height = heightinput.text.toString().toInt()
+            var weight = weighttag.text.toString().toInt()
+            var user = User(name, age, gender, height,weight)
+
+            val intent = Intent(this, AppMain::class.java)
+            intent.putExtra("user",user)
+            startActivity(intent)
+        }
 
         writebtn.setOnClickListener{
             val intent = Intent(this, InputActivity::class.java)
@@ -46,7 +61,7 @@ class bmicoculator : AppCompatActivity() {
                 var height = heightinput.text.toString().toInt()
                 var weight = weighttag.text.toString().toInt()
                 var user = User(name, age, gender, height,weight)
-
+                saveData(name,gender,age,height,weight)
                 val intent = Intent(this, AppMain::class.java)
                 intent.putExtra("user",user)
                 startActivity(intent)
@@ -59,6 +74,27 @@ class bmicoculator : AppCompatActivity() {
         if(resultCode== Activity.RESULT_OK){
             weighttag.visibility = View.VISIBLE
             weighttag.text = data!!.getStringExtra("weightin")
+        }
+    }
+    private fun saveData(name: String?, gender: String?,age: String?, height: Int, weight: Int){
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val editor = pref.edit()
+        editor.putString("name", name).putString("gender",gender).putString("age", age).putInt("height", height).putInt("weight",weight).apply()
+    }
+    private fun loadData(){
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val name = pref.getString("name","")
+        val gender = pref.getString("gender","")
+        val age = pref.getString("age","")
+        val height = pref.getInt("height",0)
+        val weight = pref.getInt("weight",0)
+
+        if(height != 0 && weight != 0){
+            nametext.setText(name)
+            gendertext.setText(gender)
+            ageText.setText(age)
+            heightinput.setText(height.toString())
+            weighttag.setText(weight.toString())
         }
     }
 }

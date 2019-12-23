@@ -28,6 +28,11 @@
             android:textColor="#000000"
             android:textSize="60sp" />
 
+        <TextView
+            android:id="@+id/gendertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
