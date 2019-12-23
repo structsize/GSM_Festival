@@ -16,6 +16,14 @@ class Estimate : AppCompatActivity() {
             // 블루투스를 사용할 수 없는 장비일 경우 null.
             Toast.makeText(getApplicationContext(), "블루투스를 사용할 수 없는 기기입니다.", Toast.LENGTH_LONG).show()
         }
+        if (!client.isEnabled())
+        {
+            client.enableBluetooth(this@Estimate, object:BluetoothSerialClient.OnBluetoothEnabledListener {
+                      override  fun onBluetoothEnabled(success:Boolean) {
+
+                        }
+                    })
+        }
 
     }
 }

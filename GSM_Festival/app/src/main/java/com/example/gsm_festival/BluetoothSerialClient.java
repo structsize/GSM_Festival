@@ -21,14 +21,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-/**
- * BluetoothSerialClient
- * 블루투스를 이용한 시리얼 통신을 간편하게~ :)
- *
- * www.dev.re.kr
- * @author ice3x2@gmail.com / Sungbeom Hong.
- *
- */
+
 public class BluetoothSerialClient {
 
 
@@ -49,11 +42,6 @@ public class BluetoothSerialClient {
     private InputStream mInputStream;
     private OutputStream mOutputStream;
 
-
-    /**
-     * BluetoothSerialClient 의 싱글 인스턴스를 가져온다.
-     * @return BluetoothSerialClient 의 인스턴스. 만약 블루투스를 사용할 수 없는 기기라면 null.
-     */
     public static BluetoothSerialClient getInstance() {
         if(sThis == null) {
             sThis = new BluetoothSerialClient();
@@ -75,10 +63,7 @@ public class BluetoothSerialClient {
 
     }
 
-    /**
-     * 연결을 닫고 자원을 해지한다.
-     * 앱 종료시 반드시 호출해 줘야 한다.
-     */
+
     public void claer() {
         close();
         mReadExecutor.shutdownNow();
@@ -86,12 +71,6 @@ public class BluetoothSerialClient {
         sThis = null;
     }
 
-    /**
-     * 블루투스를 사용 가능한 상태로 만들어준다. <br/>
-     * 만약 기기 내에서 블루투스 사용이 꺼져있다면, 사용자로 하여 블루투스 사용에 관한 선택을 하게 하는 창을 출력한다.
-     * @param context activity
-     * @param onBluetoothEnabledListener 블루투스 on/off 에 대한 이벤트.
-     */
     public void enableBluetooth(Context context, OnBluetoothEnabledListener onBluetoothEnabledListener) {
         if(!mBluetoothAdapter.isEnabled()) {
             mOnBluetoothUpListener = onBluetoothEnabledListener;
@@ -102,13 +81,6 @@ public class BluetoothSerialClient {
         }
     }
 
-
-
-
-    /**
-     * 블루투스가 사용 가능한 상태인지 확인.
-     * @return false 라면 블루투스가 off 된 상태거나 사용할 수 없다.
-     */
     public boolean isEnabled() {
         return mBluetoothAdapter.isEnabled();
     }
