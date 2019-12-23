@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:orientation="vertical">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:gravity="center"
+            android:text="식품분류 선택"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/mainbtn"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/mainbtn" />
+
+        <ImageButton
+            android:id="@+id/soupbtn"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/soupbtn" />
+
+        <ImageButton
+            android:id="@+id/sidebtn"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/sidebtn" />
+
+        <ImageButton
+            android:id="@+id/dessertbtn"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/dessertbtn" />
+    </LinearLayout>
+</LinearLayout>

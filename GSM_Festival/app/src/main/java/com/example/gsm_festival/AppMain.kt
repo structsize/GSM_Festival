@@ -44,6 +44,7 @@ class AppMain : AppCompatActivity() {
         checkbutton.setOnClickListener{
 
         }
+
         calendarbutton.setOnClickListener{
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
