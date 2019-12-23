@@ -36,13 +36,12 @@ class AppMain : AppCompatActivity() {
             }
         }
         weightcheck.setOnClickListener {
-
+            val intent = Intent(this, CheckActivity::class.java)
+            startActivity(intent)
         }
 
 
         checkbutton.setOnClickListener{
-            val intent = Intent(this, CheckActivity::class.java)
-            startActivity(intent)
 
         }
         calendarbutton.setOnClickListener{
