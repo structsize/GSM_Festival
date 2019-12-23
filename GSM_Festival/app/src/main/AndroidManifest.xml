@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gsm_festival">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KcalCheck"/>
-        <activity android:name=".Estimate"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="orientation|screenSize|keyboard"/>
-
-
-
-        <activity android:name=".CheckActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="orientation|screenSize|keyboard"/>
-
-
+        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".KcalCheck" />
+        <activity
+            android:name=".Estimate"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".CheckActivity"
+            android:configChanges="orientation|screenSize|keyboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".AppMain" />
         <activity android:name=".InputActivity" />
         <activity android:name=".bmicoculator" />
@@ -32,8 +34,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
 
 </manifest>
