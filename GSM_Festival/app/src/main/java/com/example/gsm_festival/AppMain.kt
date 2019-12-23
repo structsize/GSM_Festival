@@ -4,7 +4,6 @@ package com.example.gsm_festival
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.gsm_festival.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_app_main.*
 
 class AppMain : AppCompatActivity() {

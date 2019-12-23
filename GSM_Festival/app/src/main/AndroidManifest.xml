@@ -9,11 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".KcalCheck"
-            android:label="@string/title_activity_kcal_check"></activity>
-        <activity android:name=".Estimate" />
-        <activity android:name=".CheckActivity" />
+        <activity android:name=".KcalCheck"/>
+        <activity android:name=".Estimate"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboard"/>
+
+
+
+        <activity android:name=".CheckActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboard"/>
+
+
         <activity android:name=".AppMain" />
         <activity android:name=".InputActivity" />
         <activity android:name=".bmicoculator" />
@@ -25,5 +32,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
 
 </manifest>
