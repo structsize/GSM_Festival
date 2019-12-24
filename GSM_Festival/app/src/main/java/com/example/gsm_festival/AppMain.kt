@@ -25,18 +25,23 @@ class AppMain : AppCompatActivity() {
             gender.text = user.gender
             weight = user.weight
             height = user.height
-            val bmi : Double = weight/Math.pow(height/100.0,2.0)
-            when{
-                bmi >= 35 -> limited = 1600
-                bmi >= 30 -> limited = 1700
-                bmi >= 25 -> limited = 1800
-                bmi >= 23 -> limited = 2000
-                bmi >= 18.5 -> limited = 2200
-                else -> limited = 2500
-            }
+
+        }else if(intent.hasExtra("weight")){
+            val a = intent.getStringExtra("weight")
+            weight = a.toInt()
+
+        }
+        val bmi : Double = weight/Math.pow(height/100.0,2.0)
+        when{
+            bmi >= 35 -> limited = 1600
+            bmi >= 30 -> limited = 1700
+            bmi >= 25 -> limited = 1800
+            bmi >= 23 -> limited = 2000
+            bmi >= 18.5 -> limited = 2200
+            else -> limited = 2500
         }
         weightcheck.setOnClickListener {
-            val intent = Intent(this, CheckActivity::class.java)
+            val intent = Intent(this, Bluetooth::class.java)
             startActivity(intent)
         }
 
