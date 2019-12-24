@@ -24,35 +24,51 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="502dp"
+        android:layout_height="456dp"
+        android:gravity="right"
         android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/mainbtn"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:background="#00ff0000"
             app:srcCompat="@drawable/mainbtn" />
 
         <ImageButton
             android:id="@+id/soupbtn"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:background="#00ff0000"
             app:srcCompat="@drawable/soupbtn" />
 
         <ImageButton
             android:id="@+id/sidebtn"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:background="#00ff0000"
             app:srcCompat="@drawable/sidebtn" />
 
         <ImageButton
             android:id="@+id/dessertbtn"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="90dp"
             android:background="#00ff0000"
             app:srcCompat="@drawable/dessertbtn" />
+
+        <LinearLayout
+            android:layout_width="133dp"
+            android:layout_height="97dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="완료"
+                android:textSize="30sp" />
+        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

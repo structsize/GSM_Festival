@@ -2,15 +2,11 @@ package com.example.gsm_festival;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-/** 2. JAVA 에서는 배열보다는 Util 패키지의 List,Set,Map 인터페이스를 주요 사용한다.
- 배열은 같은 타입만 저장 가능하지만, 위의 인터페이스는 서로 다른 타입을 같은 List 안에 저장할 수 있다
- */
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-// 3. UUID : Universally Unique IDentifier, 범용 고유 실별자.import java.util.UUID;
 
 
 import android.app.Activity;
@@ -25,7 +21,6 @@ import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -85,8 +80,9 @@ public class Bluetooth extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),AppMain.class);
-                intent.putExtra("weight",mEditReceive.getText().toString());
-                startActivity(intent);
+                intent.putExtra("weightin",mEditReceive.getText().toString());
+                setResult(Activity.RESULT_OK,intent);
+                finish();
             }
         });
 

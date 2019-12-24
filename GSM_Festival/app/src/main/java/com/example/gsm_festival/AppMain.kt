@@ -1,20 +1,21 @@
 package com.example.gsm_festival
 
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.view.View
 import kotlinx.android.synthetic.main.activity_app_main.*
+import kotlinx.android.synthetic.main.activity_bmicoculator.*
 
 class AppMain : AppCompatActivity() {
-
+    var weight = 0
+    var height = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app_main)
-        var weight = 0
-        var height = 0
-        var limited = 0
-
 
         val intent : Intent = getIntent()
         if(intent.hasExtra("user")){
@@ -25,24 +26,17 @@ class AppMain : AppCompatActivity() {
             gender.text = user.gender
             weight = user.weight
             height = user.height
-
-        }else if(intent.hasExtra("weight")){
-            val a = intent.getStringExtra("weight")
-            weight = a.toInt()
-
         }
+
+        loadData()
+
+
         val bmi : Double = weight/Math.pow(height/100.0,2.0)
-        when{
-            bmi >= 35 -> limited = 1600
-            bmi >= 30 -> limited = 1700
-            bmi >= 25 -> limited = 1800
-            bmi >= 23 -> limited = 2000
-            bmi >= 18.5 -> limited = 2200
-            else -> limited = 2500
-        }
+
         weightcheck.setOnClickListener {
             val intent = Intent(this, Bluetooth::class.java)
-            startActivity(intent)
+            startActivityForResult(intent,1)
+            saveData(nametag.text.toString(),gender.text.toString(), ageoutput.text.toString(),height,weight)
         }
 
 
@@ -56,10 +50,33 @@ class AppMain : AppCompatActivity() {
         }
         kcalcheck.setOnClickListener{
             val intent = Intent(this, KcalCheck::class.java)
-            intent.putExtra("bmilimit",limited)
+            intent.putExtra("bmilimit",bmi)
             startActivity(intent)
         }
 
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode== Activity.RESULT_OK){
+            weight = data!!.getStringExtra("weightin").toInt()
+        }
+    }
+    private fun saveData(name : String , gender : String, age : String, height: Int, weight: Int){
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val editor = pref.edit()
+        editor.putString("name",name).putString("gender",gender).putString("age",age).putInt("height", height).putInt("weight1",weight).apply()
+    }
+    private fun loadData(){
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val height1 = pref.getInt("height",height)
+        val weight1 = pref.getInt("weight1",weight)
+
+        if(height1 != 0 && weight1 != 0){
+            height = height1
+            weight = weight1
+        }
     }
 }
