@@ -31,6 +31,7 @@ class bmicoculator : AppCompatActivity() {
             val intent = Intent(this, AppMain::class.java)
             intent.putExtra("user",user)
             startActivity(intent)
+            finish()
         }
 
         writebtn.setOnClickListener{
@@ -65,6 +66,7 @@ class bmicoculator : AppCompatActivity() {
                 val intent = Intent(this, AppMain::class.java)
                 intent.putExtra("user",user)
                 startActivity(intent)
+                finish()
             }
         }
     }

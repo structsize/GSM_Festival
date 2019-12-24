@@ -7,34 +7,49 @@
     tools:context=".Estimate"
     android:background="@drawable/background">
 
-
     <TextView
-        android:id="@+id/weighttext"
-        android:layout_width="241dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="80dp"
+        android:id="@+id/receiveString"
+        android:layout_width="243dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="160dp"
         android:hint="측정버튼을 누르면 몸무게가 나옵니다"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/weightbutton"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/weightbutton"
-        android:layout_width="99dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="218dp"
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="140dp"
         android:text="측정"
-        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiveString" />
+
+    <Button
+        android:id="@+id/endbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="164dp"
+        android:text="완료"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weighttext" />
+        app:layout_constraintTop_toBottomOf="@+id/btn"
+        app:layout_constraintVertical_bias="0.177" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
