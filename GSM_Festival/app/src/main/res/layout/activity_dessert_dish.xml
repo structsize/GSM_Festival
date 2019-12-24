@@ -13,9 +13,9 @@
 
     <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis1" android:id="@+id/imageView"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis1" android:id="@+id/imageView" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis2" android:id="@+id/imageView2"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis2" android:id="@+id/imageView2" android:layout_marginRight="58dp"/>
 
     <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis3" android:id="@+id/imageView3"/>
 
@@ -24,9 +24,9 @@
 
     <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis4" android:id="@+id/imageView4"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis4" android:id="@+id/imageView4" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis5" android:id="@+id/imageView5"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis5" android:id="@+id/imageView5" android:layout_marginRight="58dp"/>
 
     <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis6" android:id="@+id/imageView6"/>
 
@@ -35,9 +35,9 @@
 
     <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal" android:gravity="top">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis7" android:id="@+id/imageView7"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis7" android:id="@+id/imageView7" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis8" android:id="@+id/imageView8"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis8" android:id="@+id/imageView8" android:layout_marginRight="58dp"/>
 
     <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis9" android:id="@+id/imageView9"/>
 
@@ -46,9 +46,9 @@
 
     <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis10" android:id="@+id/imageView10"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis10" android:id="@+id/imageView10" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis11" android:id="@+id/imageView11"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis11" android:id="@+id/imageView11" android:layout_marginRight="58dp"/>
 
     <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis12" android:id="@+id/imageView12"/>
 
@@ -57,9 +57,9 @@
 
     <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis13" android:id="@+id/imageView13"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis13" android:id="@+id/imageView13" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis14" android:id="@+id/imageView14"/>
+    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis14" android:id="@+id/imageView14" android:layout_marginRight="58dp"/>
 
     <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/dis15" android:id="@+id/imageView15"/>
 
