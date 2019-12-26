@@ -70,7 +70,7 @@ public class Bluetooth extends Activity {
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                    sendData();
                     beginListenForData();
                     mWorkerThread.start();
 
@@ -103,6 +103,14 @@ public class Bluetooth extends Activity {
             }
         }
         return selectedDevice;
+    }
+    void sendData() {
+        try{
+            mOutputStream.write(1);  // 문자열 전송.
+        }catch(Exception e) {  // 문자열 전송 도중 오류가 발생한 경우
+            Toast.makeText(getApplicationContext(), "데이터 전송중 오류가 발생", Toast.LENGTH_LONG).show();
+            finish();  // App 종료
+        }
     }
 
     //  connectToSelectedDevice() : 원격 장치와 연결하는 과정을 나타냄.

@@ -1,14 +1,11 @@
 package com.example.gsm_festival
 
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.view.View
 import kotlinx.android.synthetic.main.activity_app_main.*
-import kotlinx.android.synthetic.main.activity_bmicoculator.*
 
 class AppMain : AppCompatActivity() {
     var weight = 0
@@ -40,8 +37,8 @@ class AppMain : AppCompatActivity() {
         }
 
 
-        checkbutton.setOnClickListener{
-
+        endbutton.setOnClickListener{
+            System.exit(0)
         }
 
         calendarbutton.setOnClickListener{
@@ -59,7 +56,7 @@ class AppMain : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(resultCode== Activity.RESULT_OK){
+        if(resultCode == 1){
             weight = data!!.getStringExtra("weightin").toInt()
         }
     }

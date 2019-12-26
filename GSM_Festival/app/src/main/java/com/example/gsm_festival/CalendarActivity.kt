@@ -11,13 +11,15 @@ import org.jetbrains.anko.startActivity
 
 class CalendarActivity : AppCompatActivity() {
 
-    val realm = Realm.getDefaultInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
 
+        Realm.getDefaultInstance()
+        val realm = Realm.getDefaultInstance()
 
 
         val realmResult = realm.where<Todo>()
@@ -43,8 +45,5 @@ class CalendarActivity : AppCompatActivity() {
 
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        realm.close()
-    }
+
 }

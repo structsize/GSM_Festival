@@ -70,7 +70,7 @@ public class Estimate extends Activity {
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                sendData();
                 beginListenForData();
                 mWorkerThread.start();
 
@@ -86,6 +86,15 @@ public class Estimate extends Activity {
             }
         });
 
+    }
+
+    void sendData() {
+        try{
+            mOutputStream.write(1);  // 문자열 전송.
+        }catch(Exception e) {  // 문자열 전송 도중 오류가 발생한 경우
+            Toast.makeText(getApplicationContext(), "데이터 전송중 오류가 발생", Toast.LENGTH_LONG).show();
+            finish();  // App 종료
+        }
     }
 
 

@@ -83,19 +83,19 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/checkbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="106dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="24dp"
+        android:id="@+id/endbutton"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="180dp"
         android:background="#00ff0000"
-        app:layout_constraintBottom_toTopOf="@+id/weightcheck"
-        app:layout_constraintEnd_toStartOf="@+id/calendarbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/analysis" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weightcheck"
+        app:layout_constraintTop_toBottomOf="@+id/calendarbutton"
+        app:srcCompat="@drawable/icon" />
 
     <ImageButton
         android:id="@+id/calendarbutton"
@@ -104,11 +104,11 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="106dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="15dp"
         android:background="#00ff0000"
-        app:layout_constraintBottom_toTopOf="@+id/kcalcheck"
+        app:layout_constraintBottom_toTopOf="@+id/endbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkbutton"
+        app:layout_constraintStart_toEndOf="@+id/kcalcheck"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/calendar" />
 
@@ -117,30 +117,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="180dp"
         android:background="#00ff0000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/kcalcheck"
+        app:layout_constraintEnd_toStartOf="@+id/endbutton"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbutton"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/kcalcheck"
         app:srcCompat="@drawable/scale" />
 
     <ImageButton
         android:id="@+id/kcalcheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="15dp"
         android:background="#00ff0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/weightcheck"
-        app:layout_constraintTop_toBottomOf="@+id/calendarbutton"
+        app:layout_constraintBottom_toTopOf="@+id/weightcheck"
+        app:layout_constraintEnd_toStartOf="@+id/calendarbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/dish" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
