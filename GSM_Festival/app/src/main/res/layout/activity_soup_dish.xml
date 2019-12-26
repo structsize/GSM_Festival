@@ -11,66 +11,338 @@
     <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
 
 
-    <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con1" android:id="@+id/imageView" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con1" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con2" android:id="@+id/imageView2" android:layout_marginRight="58dp"/>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con2" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con3" android:id="@+id/imageView3"/>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/con3" />
 
-</LinearLayout>
-
-
-    <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con4" android:id="@+id/imageView4" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con5" android:id="@+id/imageView5" android:layout_marginRight="58dp"/>
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con6" android:id="@+id/imageView6"/>
-
-</LinearLayout>
-
-
-    <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal" android:gravity="top">
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con7" android:id="@+id/imageView7" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con8" android:id="@+id/imageView8" android:layout_marginRight="58dp"/>
-
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con9" android:id="@+id/imageView9"/>
-
-</LinearLayout>
+        </LinearLayout>
 
 
-    <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con10" android:id="@+id/imageView10" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
+            <CheckBox
+                android:id="@+id/checkBox11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con11" android:id="@+id/imageView11" android:layout_marginRight="58dp"/>
+            <CheckBox
+                android:id="@+id/checkBox26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con12" android:id="@+id/imageView12"/>
+            <CheckBox
+                android:id="@+id/checkBox27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+        </LinearLayout>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con4" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con5" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/con6" />
+
+        </LinearLayout>
 
 
-    <LinearLayout android:layout_height="130dp" android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con13" android:id="@+id/imageView13" android:layout_marginRight="58dp" android:layout_marginLeft="5dp"/>
+            <CheckBox
+                android:id="@+id/checkBox28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con14" android:id="@+id/imageView14" android:layout_marginRight="58dp"/>
+            <CheckBox
+                android:id="@+id/checkBox29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
 
-    <ImageView android:layout_height="95dp" android:layout_width="95dp" app:srcCompat="@drawable/con15" android:id="@+id/imageView15"/>
+            <CheckBox
+                android:id="@+id/checkBox30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+        </LinearLayout>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:gravity="top"
+            android:orientation="horizontal">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con7" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con8" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/con9" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con10" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con11" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/con12" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con13" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginRight="58dp"
+                app:srcCompat="@drawable/con14" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/con15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CheckBox" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>
 
-    <TextView android:layout_height="44dp" android:layout_width="167dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp" android:layout_marginLeft="88dp" android:layout_marginStart="88dp" android:id="@+id/textView" app:layout_constraintHorizontal_bias="0.0" tools:text="체중관리 식단표" android:text="TextView" app:layout_constraintStart_toEndOf="@+id/imageButton4" app:layout_constraintEnd_toStartOf="@+id/ScrollView" android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:layout_marginRight="222dp" android:layout_marginEnd="222dp"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="167dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginRight="222dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/ScrollView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="체중관리 식단표" />
 
-    <TextView android:layout_height="44dp" android:layout_width="172dp" app:layout_constraintStart_toStartOf="parent" android:id="@+id/kcal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:text="칼로리 : " app:layout_constraintTop_toBottomOf="@+id/ScrollView" android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/kcal"
+        android:layout_width="87dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="27dp"
+        android:text="칼로리 : "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollView"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="87dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="27dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollView"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
