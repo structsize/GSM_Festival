@@ -62,7 +62,7 @@ public class Estimate extends Activity {
         setContentView(R.layout.activity_estimate);
 
         mEditReceive = (TextView)findViewById(R.id.receiveString);
-        b=(Button)findViewById(R.id.endbtn);
+        b=(Button)findViewById(R.id.endbutton);
         btn = (Button)findViewById(R.id.btn);
 
         // 블루투스 활성화 시키는 메소드

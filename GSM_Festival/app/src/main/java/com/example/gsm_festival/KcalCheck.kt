@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_kcal_check.*
+import kotlinx.android.synthetic.main.activity_main_dish.*
 
 
 class KcalCheck : AppCompatActivity() {
+
     var kcal = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,30 +28,42 @@ class KcalCheck : AppCompatActivity() {
 
         }
 
+        endbutton.setOnClickListener{
+            val intent = Intent(this, FoodCheck::class.java)
+            intent.putExtra("Kcal",kcal)
+            startActivity(intent)
+        }
         mainbtn.setOnClickListener{
             val intent = Intent(this, MainDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
-            startActivity(intent)
+            startActivityForResult(intent,1)
         }
         soupbtn.setOnClickListener{
             val intent = Intent(this, SoupDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
-            startActivity(intent)
+            startActivityForResult(intent,1)
         }
         sidebtn.setOnClickListener{
             val intent = Intent(this, SideDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
-            startActivity(intent)
+            startActivityForResult(intent,1)
         }
         dessertbtn.setOnClickListener{
             val intent = Intent(this, DessertDish::class.java)
             intent.putExtra("Kcal", kcal)
             intent.putExtra("limited",limited)
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
 
+
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode == 1){
+            kcaltext.text = data!!.getStringExtra("Kcal").toString()
+        }
     }
 }

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainDish">
+    tools:context=".MainDish"
+    android:background="@drawable/background">
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -73,25 +75,25 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/checkBox1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="현미밥 321kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="쌀밥 313kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="잡곡밥 304kcal" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,21 +135,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="찰밥 321kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="카레 633kcal" />
 
                 <CheckBox
-                    android:id="@+id/checkBox7"
+                    android:id="@+id/checkBox6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="볶음밥 450kcal" />
             </LinearLayout>
 
             <LinearLayout
@@ -186,25 +188,25 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox14"
+                    android:id="@+id/checkBox7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="잔치국수 408kcal" />
 
                 <CheckBox
-                    android:id="@+id/checkBox15"
+                    android:id="@+id/checkBox8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="비빔국수 489kcal" />
 
                 <CheckBox
-                    android:id="@+id/checkBox16"
+                    android:id="@+id/checkBox9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="초계국수 600kcal" />
             </LinearLayout>
 
             <LinearLayout
@@ -241,25 +243,25 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox17"
+                    android:id="@+id/checkBox10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="비빔밥 599kcal" />
 
                 <CheckBox
-                    android:id="@+id/checkBox18"
+                    android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="전복죽 670kcal" />
 
                 <CheckBox
-                    android:id="@+id/checkBox19"
+                    android:id="@+id/checkBox12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="팥죽 382kcal" />
             </LinearLayout>
 
         </LinearLayout>
@@ -305,7 +307,6 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="27dp"
-        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

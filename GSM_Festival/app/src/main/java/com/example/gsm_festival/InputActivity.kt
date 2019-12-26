@@ -12,7 +12,7 @@ class InputActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input)
-        endbtn.setOnClickListener{
+        endbutton.setOnClickListener{
             if(Inputtext.text.isEmpty()) {
                 Toast.makeText(this,"몸무게를 적어주세요!", Toast.LENGTH_SHORT).show()
             }else {

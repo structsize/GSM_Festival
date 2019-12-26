@@ -12,18 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Bluetooth"></activity>
         <activity android:name=".DessertDish" />
         <activity android:name=".SideDish" />
         <activity android:name=".SoupDish" />
         <activity android:name=".MainDish" />
         <activity
-            android:name=".CheckActivity"
+            android:name=".Bluetooth"
             android:configChanges="orientation|screenSize|keyboard"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity android:name=".EditActivity" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".KcalCheck" />
+        <activity android:name=".FoodCheck"/>
         <activity
             android:name=".Estimate"
             android:configChanges="orientation|screenSize|keyboard"

@@ -45,9 +45,10 @@ class AppMain : AppCompatActivity() {
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
+
         kcalcheck.setOnClickListener{
             val intent = Intent(this, KcalCheck::class.java)
-            intent.putExtra("bmilimit",bmi)
+            intent.putExtra("bmi",bmi)
             startActivity(intent)
         }
 
