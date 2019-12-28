@@ -19,7 +19,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:id="@+id/imageButton4"/>
+        android:id="@+id/backbutton"/>
 
 
     <ScrollView
@@ -340,7 +340,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toStartOf="@+id/ScrollView"
         app:layout_constraintHorizontal_bias="0.018"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="체중관리 식단표" />
 
@@ -354,18 +354,19 @@
         android:text="칼로리 : "
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/caltext1"
+        app:layout_constraintEnd_toStartOf="@+id/caltext2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ScrollView"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/caltext1"
+        android:id="@+id/caltext2"
         android:layout_width="87dp"
         android:layout_height="38dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="27dp"
+        android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -69,8 +69,8 @@ class AppMain : AppCompatActivity() {
     private fun loadData(){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
 
-        val height1 = pref.getInt("height",height)
-        val weight1 = pref.getInt("weight1",weight)
+        val height1 = pref.getInt("height",0)
+        val weight1 = pref.getInt("weight1",0)
 
         if(height1 != 0 && weight1 != 0){
             height = height1

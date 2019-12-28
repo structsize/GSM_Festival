@@ -18,7 +18,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:id="@+id/imageButton4"/>
+        android:id="@+id/backbutton"/>
 
 
     <ScrollView
@@ -47,7 +47,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="95dp"
-                android:layout_height="95dp"
+                android:layout_height="83dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="58dp"
                 app:srcCompat="@drawable/dis1" />
@@ -75,9 +75,10 @@
 
             <CheckBox
                 android:id="@+id/checkBox40"
-                android:layout_width="wrap_content"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:focusable="auto"
                 tools:text="키위 54kcal" />
 
             <CheckBox
@@ -309,14 +310,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="떡볶이 300kcal" />
+                android:text="아메리카노 5kcal" />
 
             <CheckBox
                 android:id="@+id/checkBox54"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="어묵 70kcal" />
+                android:text="코코아 153kcal" />
         </LinearLayout>
 
     </LinearLayout>
@@ -336,7 +337,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toStartOf="@+id/ScrollView"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="체중관리 식단표" />
 
@@ -356,12 +357,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/caltext1"
+        android:id="@+id/caltext4"
         android:layout_width="87dp"
         android:layout_height="38dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="27dp"
+        android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
