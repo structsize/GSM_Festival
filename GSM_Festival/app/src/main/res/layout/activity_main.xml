@@ -63,7 +63,7 @@
         <ImageButton
             android:id="@+id/startbtn"
             android:layout_width="match_parent"
-            android:layout_height="223dp"
+            android:layout_height="213dp"
             android:layout_weight="1"
             android:background="#00ff0000"
             app:srcCompat="@drawable/startbtn" />
