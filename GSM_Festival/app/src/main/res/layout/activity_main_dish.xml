@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:checked="false"
-                    android:text="현미밥 321kcal" />
+                    android:text="현미밥 322kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox2"

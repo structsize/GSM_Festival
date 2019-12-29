@@ -9,8 +9,9 @@ import kotlinx.android.synthetic.main.activity_main_dish.*
 
 
 class KcalCheck : AppCompatActivity() {
-    var foodname : String = ""
+    var foodname = arrayListOf<String>()
     var kcal = 0
+    var kcalstr = arrayListOf<Int>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kcal_check)
@@ -33,30 +34,40 @@ class KcalCheck : AppCompatActivity() {
             val intent = Intent(this, FoodCheck::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("food",foodname)
+            intent.putExtra("kcaltxt",kcalstr)
             startActivity(intent)
+            finish()
         }
         mainbtn.setOnClickListener{
             val intent = Intent(this, MainDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
+            intent.putExtra("food",foodname)
+            intent.putExtra("kcalstr",kcalstr)
             startActivityForResult(intent,1)
         }
         soupbtn.setOnClickListener{
             val intent = Intent(this, SoupDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
+            intent.putExtra("food",foodname)
+            intent.putExtra("kcalstr",kcalstr)
             startActivityForResult(intent,1)
         }
         sidebtn.setOnClickListener{
             val intent = Intent(this, SideDish::class.java)
             intent.putExtra("Kcal",kcal)
             intent.putExtra("limited",limited)
+            intent.putExtra("food",foodname)
+            intent.putExtra("kcalstr",kcalstr)
             startActivityForResult(intent,1)
         }
         dessertbtn.setOnClickListener{
             val intent = Intent(this, DessertDish::class.java)
             intent.putExtra("Kcal", kcal)
             intent.putExtra("limited",limited)
+            intent.putExtra("food",foodname)
+            intent.putExtra("kcalstr",kcalstr)
             startActivityForResult(intent, 1)
         }
 
@@ -67,7 +78,8 @@ class KcalCheck : AppCompatActivity() {
         if(resultCode == Activity.RESULT_OK){
             kcaltext.text = data!!.getIntExtra("Kcal", 0).toString()
             kcal = kcaltext.text.toString().toInt()
-            foodname += data.getStringExtra("food").toString()
+            foodname = data.getStringArrayListExtra("food")
+            kcalstr = data.getIntegerArrayListExtra("kcaltxt")
         }
     }
 }
