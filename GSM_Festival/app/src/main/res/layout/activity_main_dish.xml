@@ -270,21 +270,19 @@
     </ScrollView>
 
     <TextView
-    android:id="@+id/textView"
-    android:layout_width="167dp"
-    android:layout_height="44dp"
-    android:layout_marginStart="88dp"
-    android:layout_marginLeft="88dp"
-    android:layout_marginTop="36dp"
-    android:layout_marginEnd="222dp"
-    android:layout_marginRight="222dp"
-    android:text="TextView"
-    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    app:layout_constraintEnd_toStartOf="@+id/ScrollView"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toEndOf="@+id/backbutton"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:text="체중관리 식단표" />
+        android:id="@+id/textView"
+        android:layout_width="167dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="222dp"
+        android:text="체중관리 식단표"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/ScrollView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/backbutton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="체중관리 식단표" />
 
     <TextView
         android:id="@+id/kcal"
