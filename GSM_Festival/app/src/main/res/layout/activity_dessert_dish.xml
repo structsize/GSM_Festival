@@ -22,307 +22,310 @@
 
 
     <ScrollView
-        android:layout_height="520dp"
-        android:layout_width="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/ScrollView"
-        app:layout_constraintVertical_bias="0.563"
-        app:layout_constraintHorizontal_bias="0.428"
+        android:layout_width="400dp"
+        android:layout_height="383dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="vertical">
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="95dp"
-                android:layout_height="83dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis1" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="95dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="95dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis2" />
+                android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="95dp"
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis1" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis2" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/dis3" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="키위 54kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="딸기 40kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="사과 52kcal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="95dp"
-                app:srcCompat="@drawable/dis3" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis4" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis5" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/dis6" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="복숭아 39kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="푸딩 120kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="파인애플 50kcal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis7" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis8" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/dis9" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="마카롱 150kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="케이크 280kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="귤 39kcal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis10" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis11" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/dis12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="아이스크림 207kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="포도 67kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="떡 200kcal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="58dp"
+                    app:srcCompat="@drawable/dis13" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="101dp"
+                    android:layout_height="95dp"
+                    android:layout_marginRight="52dp"
+                    app:srcCompat="@drawable/dis14" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    app:srcCompat="@drawable/dis15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="빙수 1개 700kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="아메리카노 5kcal" />
+
+                <CheckBox
+                    android:id="@+id/checkBox54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="코코아 153kcal" />
+            </LinearLayout>
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox40"
-                android:layout_width="158dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:focusable="auto"
-                tools:text="키위 54kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="딸기 40kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="사과 52kcal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis4" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis5" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                app:srcCompat="@drawable/dis6" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox43"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="복숭아 39kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="푸딩 120kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="파인애플 50kcal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:gravity="top"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis7" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis8" />
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                app:srcCompat="@drawable/dis9" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox46"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="마카롱 150kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox47"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="케이크 280kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox48"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="귤 39kcal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis10" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis11" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                app:srcCompat="@drawable/dis12" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox49"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="아이스크림 207kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="포도 67kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="떡 200kcal" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="58dp"
-                app:srcCompat="@drawable/dis13" />
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="101dp"
-                android:layout_height="95dp"
-                android:layout_marginRight="52dp"
-                app:srcCompat="@drawable/dis14" />
-
-            <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                app:srcCompat="@drawable/dis15" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="빙수 1개 700kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="아메리카노 5kcal" />
-
-            <CheckBox
-                android:id="@+id/checkBox54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="코코아 153kcal" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView"
@@ -358,6 +361,7 @@
         android:id="@+id/caltext4"
         android:layout_width="87dp"
         android:layout_height="38dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="27dp"
@@ -365,6 +369,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kcal"
         app:layout_constraintTop_toBottomOf="@+id/ScrollView"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

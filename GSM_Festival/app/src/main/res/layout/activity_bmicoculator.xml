@@ -139,7 +139,7 @@
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="67dp"
+                android:layout_width="134dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/text"
@@ -176,7 +176,7 @@
 
             <TextView
                 android:id="@+id/weighttag"
-                android:layout_width="112dp"
+                android:layout_width="92dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
