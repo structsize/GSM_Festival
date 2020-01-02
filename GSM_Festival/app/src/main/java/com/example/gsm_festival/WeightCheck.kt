@@ -10,8 +10,8 @@ import java.util.*
 
 class WeightCheck : AppCompatActivity(){
     val calendar = Calendar.getInstance()
-    var weightstr : String? = ""
-    var timestr : String? = ""
+    var weightstr : String = ""
+    var timestr : String = ""
     var weight = 0
     var cnt = 0
     var weightlist = arrayListOf<Int>()
@@ -19,6 +19,7 @@ class WeightCheck : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weight_check)
+
 
         loaddata()
 
@@ -41,6 +42,7 @@ class WeightCheck : AppCompatActivity(){
             if(weight != 0 ) {
                 intent.putExtra("weightin", weight.toString())
                 setResult(Activity.RESULT_OK, intent)
+
             }
             savedata()
             finish()
@@ -61,20 +63,25 @@ class WeightCheck : AppCompatActivity(){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
         val editor = pref.edit()
         while(cnt<weightlist.size){
-            weightstr = weightstr + weightlist[cnt].toString() + ", "
-            timestr = timestr + timelist[cnt].toString() + ", "
+            if(weightstr != "") {
+                weightstr = weightstr + weightlist[cnt].toString() + ", "
+                timestr = timestr + timelist[cnt].toString() + ", "
+                cnt++
+            }
         }
-        editor.putString("time",timestr).putString("weight",weightstr).apply()
+        editor.putString("time",timestr).putString("weight12",weightstr).apply()
     }
     private fun loaddata(){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
-        weightstr = pref.getString("weight","")
-        timestr = pref.getString("time","")
-        var st1 = StringTokenizer(weightstr, ", ")
-        var st2 = StringTokenizer(timestr, ", ")
-        while(st1.hasMoreTokens() && st2.hasMoreTokens()){
-            weightlist.add(st1.nextToken().toInt())
-            timelist.add(st2.nextToken().toLong())
+        weightstr = pref.getString("weight12","").toString()
+        timestr = pref.getString("time","").toString()
+        if(weightstr != "" && timestr != "") {
+            var st1 = StringTokenizer(weightstr, ", ")
+            var st2 = StringTokenizer(timestr, ", ")
+            while (st1.hasMoreTokens() && st2.hasMoreTokens()) {
+                weightlist.add(st1.nextToken().toInt())
+                timelist.add(st2.nextToken().toLong())
+            }
         }
     }
 

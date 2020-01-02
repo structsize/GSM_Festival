@@ -13,12 +13,12 @@ class WeightAdapter(val context : Context, var weightlist : ArrayList<Weight>) :
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view : View = LayoutInflater.from(context).inflate(R.layout.item_weight, null)
 
-        val weighttxt = view.findViewById<TextView>(R.id.text1)
-        val timetxt = view.findViewById<TextView>(R.id.text2)
+        val weighttxt = view.findViewById<TextView>(R.id.text2)
+        val timetxt = view.findViewById<TextView>(R.id.text1)
         val data = weightlist[position]
 
         weighttxt.text = data.weight.toString() + " kg"
-        timetxt.text = DateFormat.format("yyyy/MM/dd   HH-mm-ss", data.time)
+        timetxt.text = DateFormat.format("yyyy/MM/dd   HH:mm:ss", data.time)
         return view
     }
 

@@ -8,23 +8,15 @@ class Food : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
+        var bmi = 0
         val intent = getIntent()
-        var time = intent.getIntExtra("time",0)
-        var cnt = 0
-        var foodname = arrayListOf<String>()
-        var kcal = arrayListOf<Int>()
-        var foodlist = arrayListOf<Data>()
-        if(intent.hasExtra("food")){
-            foodname = intent.getStringArrayListExtra("food")
+        if(intent.hasExtra("bmi"))
+        {
+            bmi = intent.getIntExtra("bmi",0)
         }
-        if(intent.hasExtra("kcal")){
-            while(cnt < foodname.size){
-                val data = Data(foodname[cnt], kcal[cnt])
 
-                foodlist.add(data)
-                cnt++
-            }
-        }
+
+
 
     }
 }
