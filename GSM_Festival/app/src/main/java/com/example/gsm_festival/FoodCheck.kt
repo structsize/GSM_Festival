@@ -15,6 +15,8 @@ import kotlin.collections.ArrayList
 
 class FoodCheck : AppCompatActivity() {
 
+    val calendar = Calendar.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food_check)
@@ -44,7 +46,16 @@ class FoodCheck : AppCompatActivity() {
         val foodAdapter = FoodAdapter(this, foodlist)
         listView2.adapter = foodAdapter
 
-        button.setOnClickListener{
+        button.setOnClickListener {
+            val intent = Intent(this, Food::class.java)
+            intent.putExtra("food",foodname)
+            intent.putExtra("kcal",kcalstr)
+            intent.putExtra("time",calendar.timeInMillis)
+            startActivity(intent)
+            finish()
+        }
+
+        button2.setOnClickListener{
             finish()
         }
     }

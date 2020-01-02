@@ -32,11 +32,6 @@ public class Bluetooth extends Activity {
     Set<BluetoothDevice> mDevices;
     // 폰의 블루투스 모듈을 사용하기 위한 오브젝트.
     BluetoothAdapter mBluetoothAdapter;
-    /**
-     BluetoothDevice 로 기기의 장치정보를 알아낼 수 있는 자세한 메소드 및 상태값을 알아낼 수 있다.
-     연결하고자 하는 다른 블루투스 기기의 이름, 주소, 연결 상태 등의 정보를 조회할 수 있는 클래스.
-     현재 기기가 아닌 다른 블루투스 기기와의 연결 및 정보를 알아낼 때 사용.
-     */
     BluetoothDevice mRemoteDevie;
     // 스마트폰과 페어링 된 디바이스간 통신 채널에 대응 하는 BluetoothSocket
     BluetoothSocket mSocket = null;
@@ -79,7 +74,7 @@ public class Bluetooth extends Activity {
         b.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AppMain.class);
+                Intent intent = new Intent(getApplicationContext(),WeightCheck.class);
                 intent.putExtra("weightin",mEditReceive.getText().toString());
                 setResult(Activity.RESULT_OK,intent);
                 finish();
@@ -260,29 +255,17 @@ public class Bluetooth extends Activity {
 
 
     void checkBluetooth() {
-        /**
-         * getDefaultAdapter() : 만일 폰에 블루투스 모듈이 없으면 null 을 리턴한다.
-         이경우 Toast를 사용해 에러메시지를 표시하고 앱을 종료한다.
-         */
+
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if(mBluetoothAdapter == null ) {  // 블루투스 미지원
             Toast.makeText(getApplicationContext(), "기기가 블루투스를 지원하지 않습니다.", Toast.LENGTH_LONG).show();
             finish();  // 앱종료
         }
         else { // 블루투스 지원
-            /** isEnable() : 블루투스 모듈이 활성화 되었는지 확인.
-             *               true : 지원 ,  false : 미지원
-             */
             if(!mBluetoothAdapter.isEnabled()) { // 블루투스 지원하며 비활성 상태인 경우.
                 Toast.makeText(getApplicationContext(), "현재 블루투스가 비활성 상태입니다.", Toast.LENGTH_LONG).show();
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                // REQUEST_ENABLE_BT : 블루투스 활성 상태의 변경 결과를 App 으로 알려줄 때 식별자로 사용(0이상)
-                /**
-                 startActivityForResult 함수 호출후 다이얼로그가 나타남
-                 "예" 를 선택하면 시스템의 블루투스 장치를 활성화 시키고
-                 "아니오" 를 선택하면 비활성화 상태를 유지 한다.
-                 선택 결과는 onActivityResult 콜백 함수에서 확인할 수 있다.
-                 */
+
                 startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
             }
             else // 블루투스 지원하며 활성 상태인 경우.
@@ -290,10 +273,6 @@ public class Bluetooth extends Activity {
         }
     }
 
-
-
-    // onDestroy() : 어플이 종료될때 호출 되는 함수.
-    //               블루투스 연결이 필요하지 않는 경우 입출력 스트림 소켓을 닫아줌.
     @Override
     protected void onDestroy() {
         try{
@@ -304,20 +283,8 @@ public class Bluetooth extends Activity {
         super.onDestroy();
     }
 
-
-    // onActivityResult : 사용자의 선택결과 확인 (아니오, 예)
-    // RESULT_OK: 블루투스가 활성화 상태로 변경된 경우. "예"
-    // RESULT_CANCELED : 오류나 사용자의 "아니오" 선택으로 비활성 상태로 남아 있는 경우  RESULT_CANCELED
-
-    /**
-     사용자가 request를 허가(또는 거부)하면 안드로이드 앱의 onActivityResult 메소도를 호출해서 request의 허가/거부를 확인할수 있다.
-     첫번째 requestCode : startActivityForResult 에서 사용했던 요청 코드. REQUEST_ENABLE_BT 값
-     두번째 resultCode  : 종료된 액티비티가 setReuslt로 지정한 결과 코드. RESULT_OK, RESULT_CANCELED 값중 하나가 들어감.
-     세번째 data        : 종료된 액티비티가 인테트를 첨부했을 경우, 그 인텐트가 들어있고 첨부하지 않으면 null
-     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // startActivityForResult 를 여러번 사용할 땐 이런 식으로 switch 문을 사용하여 어떤 요청인지 구분하여 사용함.
         switch(requestCode) {
             case REQUEST_ENABLE_BT:
                 if(resultCode == RESULT_OK) { // 블루투스 활성화 상태

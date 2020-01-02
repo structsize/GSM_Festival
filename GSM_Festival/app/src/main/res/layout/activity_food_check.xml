@@ -25,13 +25,11 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="299dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="25dp"
         android:text="확인"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/kcaltext"
@@ -39,6 +37,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="29dp"
+        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17" />
@@ -66,12 +65,24 @@
         android:layout_height="31dp"
         android:layout_marginStart="218dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="88dp"
         android:text="총 칼로리 : "
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/kcaltext"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="211dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="25dp"
+        android:text="취소"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

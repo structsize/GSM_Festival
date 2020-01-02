@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Food"></activity>
+        <activity android:name=".Weight_Food" />
+        <activity android:name=".WeightCheck" />
         <activity android:name=".DessertDish" />
         <activity android:name=".SideDish" />
         <activity android:name=".SoupDish" />
@@ -23,7 +26,7 @@
         <activity android:name=".EditActivity" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".KcalCheck" />
-        <activity android:name=".FoodCheck"/>
+        <activity android:name=".FoodCheck" />
         <activity
             android:name=".Estimate"
             android:configChanges="orientation|screenSize|keyboard"

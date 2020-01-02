@@ -5,9 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
+import io.realm.Realm
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import io.realm.kotlin.createObject
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_app_main.*
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class AppMain : AppCompatActivity() {
+
     var weight = 0
     var height = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +31,9 @@ class AppMain : AppCompatActivity() {
             gender.text = user.gender
             weight = user.weight
             height = user.height
+
         }
+
 
         loadData()
 
@@ -31,9 +41,10 @@ class AppMain : AppCompatActivity() {
         val bmi : Double = weight/Math.pow(height/100.0,2.0)
 
         weightcheck.setOnClickListener {
-            val intent = Intent(this, Bluetooth::class.java)
+            val intent = Intent(this, WeightCheck::class.java)
             startActivityForResult(intent,1)
             saveData(nametag.text.toString(),gender.text.toString(), ageoutput.text.toString(),height,weight)
+
         }
 
 
@@ -47,7 +58,7 @@ class AppMain : AppCompatActivity() {
         }
 
         kcalcheck.setOnClickListener{
-            val intent = Intent(this, KcalCheck::class.java)
+            val intent = Intent(this, Food::class.java)
             intent.putExtra("bmi",bmi)
             startActivity(intent)
         }
@@ -59,17 +70,18 @@ class AppMain : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == 1){
             weight = data!!.getStringExtra("weightin").toInt()
+
         }
     }
     private fun saveData(name : String , gender : String, age : String, height: Int, weight: Int){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
         val editor = pref.edit()
-        editor.putString("name",name).putString("gender",gender).putString("age",age).putInt("height", height).putInt("weight1",weight).apply()
+        editor.putString("name",name).putString("gender",gender).putString("age",age).putInt("height1", height).putInt("weight1",weight).apply()
     }
     private fun loadData(){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
 
-        val height1 = pref.getInt("height",0)
+        val height1 = pref.getInt("height1",0)
         val weight1 = pref.getInt("weight1",0)
 
         if(height1 != 0 && weight1 != 0){
@@ -77,4 +89,6 @@ class AppMain : AppCompatActivity() {
             weight = weight1
         }
     }
+
 }
+

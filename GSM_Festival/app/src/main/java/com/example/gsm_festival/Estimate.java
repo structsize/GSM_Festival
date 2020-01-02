@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -24,6 +25,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
+import io.realm.Realm;
+
 
 public class Estimate extends Activity {
     // 사용자 정의 함수로 블루투스 활성 상태의 변경 결과를 App으로 알려줄때 식별자로 사용됨 (0보다 커야함)
@@ -37,6 +42,8 @@ public class Estimate extends Activity {
      연결하고자 하는 다른 블루투스 기기의 이름, 주소, 연결 상태 등의 정보를 조회할 수 있는 클래스.
      현재 기기가 아닌 다른 블루투스 기기와의 연결 및 정보를 알아낼 때 사용.
      */
+    Realm realm = Realm.getDefaultInstance();
+    Calendar calendar = Calendar.getInstance();
     BluetoothDevice mRemoteDevie;
     // 스마트폰과 페어링 된 디바이스간 통신 채널에 대응 하는 BluetoothSocket
     BluetoothSocket mSocket = null;
@@ -332,6 +339,7 @@ public class Estimate extends Activity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 }
 
 

@@ -28,6 +28,11 @@ class EditActivity : AppCompatActivity() {
         }else{
             updateMode(id)
         }
+        calendarView.setOnDateChangeListener{ view, year, month, dayOfMonth ->
+            calendar.set(Calendar.YEAR,year)
+            calendar.set(Calendar.MONTH, month)
+            calendar.set(Calendar.DAY_OF_YEAR, dayOfMonth)
+        }
 
     }
 
@@ -52,10 +57,7 @@ class EditActivity : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        realm.close()
-    }
+
 
 
     private fun insertTodo() {
@@ -101,5 +103,9 @@ class EditActivity : AppCompatActivity() {
         alert("내용이 삭제 되었습니다.") {
             yesButton { finish() }
         }.show()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        realm.close()
     }
 }

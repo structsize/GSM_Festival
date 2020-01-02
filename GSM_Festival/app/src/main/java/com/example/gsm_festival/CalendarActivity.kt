@@ -15,10 +15,8 @@ class CalendarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_calendar)
 
-        Realm.init(this)
         val realm = Realm.getDefaultInstance()
 
 
@@ -37,13 +35,6 @@ class CalendarActivity : AppCompatActivity() {
         fab.setOnClickListener{
             startActivity<EditActivity>()
         }
-
-        fab.setOnClickListener {
-            startActivity<EditActivity>()
-
-        }
-
-
     }
 
 }

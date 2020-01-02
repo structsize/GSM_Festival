@@ -9,13 +9,25 @@ import android.os.Parcelable
 import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
+import io.realm.Realm
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import io.realm.kotlin.createObject
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_bmicoculator.*
-
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.yesButton
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 
 class bmicoculator : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        Realm.init(this)
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmicoculator)
         loadData()
@@ -63,6 +75,7 @@ class bmicoculator : AppCompatActivity() {
                 var weight = weighttag.text.toString().toInt()
                 var user = User(name, age, gender, height,weight)
                 saveData(name,gender,age,height,weight)
+
                 val intent = Intent(this, AppMain::class.java)
                 intent.putExtra("user",user)
                 startActivity(intent)
@@ -70,6 +83,9 @@ class bmicoculator : AppCompatActivity() {
             }
         }
     }
+
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -99,6 +115,9 @@ class bmicoculator : AppCompatActivity() {
             weighttag.setText(weight.toString())
         }
     }
+
+
+
 }
 
 
