@@ -87,7 +87,15 @@ public class Estimate extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),bmicoculator.class);
-                intent.putExtra("weightin",mEditReceive.getText().toString());
+
+                String s = mEditReceive.getText().toString();
+                int a = 0;
+                int b;
+                for(int i = 0; i < s.length()-1; i++){
+                    b = s.charAt(i)-48;
+                    a = a + (int)(b*Math.pow(10.0,s.length()-i-2));
+                }
+                intent.putExtra("weightin",a);
                 setResult(Activity.RESULT_OK,intent);
                 finish();
             }

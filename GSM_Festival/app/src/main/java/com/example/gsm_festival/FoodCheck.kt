@@ -24,6 +24,7 @@ class FoodCheck : AppCompatActivity() {
         var cnt = 0
         var foodname = arrayListOf<String>()
         var kcalstr = arrayListOf<Int>()
+
         if(intent.hasExtra("food"))
         {
             foodname = intent.getStringArrayListExtra("food")
@@ -47,17 +48,9 @@ class FoodCheck : AppCompatActivity() {
         listView2.adapter = foodAdapter
 
         button.setOnClickListener {
-            val intent = Intent(this, Food::class.java)
-            intent.putExtra("food",foodname)
-            intent.putExtra("kcal",kcalstr)
-            intent.putExtra("time",calendar.timeInMillis)
-            startActivity(intent)
             finish()
         }
 
-        button2.setOnClickListener{
-            finish()
-        }
     }
 }
 

@@ -91,7 +91,7 @@ class bmicoculator : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode== Activity.RESULT_OK){
             weighttag.visibility = View.VISIBLE
-            weighttag.text = data!!.getStringExtra("weightin")
+            weighttag.text = data!!.getIntExtra("weightin",0).toString()
         }
     }
     private fun saveData(name: String?, gender: String?,age: String?, height: Int, weight: Int){

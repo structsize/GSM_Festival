@@ -17,7 +17,7 @@ class InputActivity : AppCompatActivity() {
                 Toast.makeText(this,"몸무게를 적어주세요!", Toast.LENGTH_SHORT).show()
             }else {
                 val intent = Intent()
-                intent.putExtra("weightin", Inputtext.text.toString())
+                intent.putExtra("weightin", Inputtext.text.toString().toInt())
                 setResult(Activity.RESULT_OK, intent)
                 finish()
             }

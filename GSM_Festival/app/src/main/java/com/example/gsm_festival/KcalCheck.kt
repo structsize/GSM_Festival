@@ -30,6 +30,7 @@ class KcalCheck : AppCompatActivity() {
 
         }
 
+
         endbutton.setOnClickListener{
             val intent = Intent(this, FoodCheck::class.java)
             intent.putExtra("Kcal",kcal)

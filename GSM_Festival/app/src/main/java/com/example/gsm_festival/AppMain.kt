@@ -58,7 +58,7 @@ class AppMain : AppCompatActivity() {
         }
 
         kcalcheck.setOnClickListener{
-            val intent = Intent(this, Food::class.java)
+            val intent = Intent(this, KcalCheck::class.java)
             intent.putExtra("bmi",bmi)
             startActivity(intent)
         }
@@ -69,7 +69,7 @@ class AppMain : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == 1){
-            weight = data!!.getStringExtra("weightin").toInt()
+            weight = data!!.getIntExtra("weightin",weight)
 
         }
     }

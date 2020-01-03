@@ -33,12 +33,13 @@
 
     <ListView
         android:id="@+id/listView3"
-        android:layout_width="336dp"
-        android:layout_height="408dp"
+        android:layout_width="341dp"
+        android:layout_height="316dp"
         android:layout_marginStart="77dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="78dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -49,11 +50,24 @@
         android:layout_marginStart="176dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="176dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="60dp"
         android:text="지금까지 측정한 결과"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@id/listView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weighttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="239dp"
+        android:layout_marginBottom="599dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

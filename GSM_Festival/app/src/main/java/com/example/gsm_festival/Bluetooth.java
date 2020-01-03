@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -40,7 +41,7 @@ public class Bluetooth extends Activity {
     char mCharDelimiter =  '\n';
 
 
-
+    Calendar calendar = Calendar.getInstance();
     Thread mWorkerThread = null;
     byte[] readBuffer;
     int readBufferPosition;
@@ -75,7 +76,15 @@ public class Bluetooth extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),WeightCheck.class);
-                intent.putExtra("weightin",mEditReceive.getText().toString());
+                String s = mEditReceive.getText().toString();
+                int a = 0;
+                int b;
+                for(int i = 0; i < s.length()-1; i++){
+                   b = s.charAt(i)-48;
+                   a = a + (int)(b*Math.pow(10.0,s.length()-i-2));
+                }
+                intent.putExtra("time",calendar.getTimeInMillis());
+                intent.putExtra("weighti",a);
                 setResult(Activity.RESULT_OK,intent);
                 finish();
             }
