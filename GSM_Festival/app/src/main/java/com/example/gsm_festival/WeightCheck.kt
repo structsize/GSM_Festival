@@ -42,7 +42,7 @@ class WeightCheck : AppCompatActivity(){
         okbtn.setOnClickListener {
             val intent = Intent()
             if(weight != 0) {
-                intent.putExtra("weightin", weight)
+                intent.putExtra("weighti", weight)
             }
             setResult(Activity.RESULT_OK, intent)
             savedata()

@@ -76,21 +76,21 @@
 
                 <CheckBox
                     android:id="@+id/checkBox13"
-                    android:layout_width="91dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="된장국 76kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox14"
-                    android:layout_width="105dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="김치찌개 456kcal" />
 
                 <CheckBox
                     android:id="@+id/checkBox15"
-                    android:layout_width="93dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="콩나물국 40kcal" />

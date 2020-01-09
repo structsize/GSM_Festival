@@ -20,12 +20,12 @@ class KcalCheck : AppCompatActivity() {
         if(intents.hasExtra("bmi")){
             val bmi = intents.getDoubleExtra("bmi",0.0)
             when{
-                bmi >= 35 -> limited = 2007/3
-                bmi >= 30 -> limited = 2103/3
-                bmi >= 25 -> limited = 2202/3
-                bmi >= 23 -> limited = 2301/3
-                bmi >= 18.5 -> limited = 2400/3
-                else -> limited = 3000/3
+                bmi >= 35 -> limited = 2007
+                bmi >= 30 -> limited = 2103
+                bmi >= 25 -> limited = 2202
+                bmi >= 23 -> limited = 2301
+                bmi >= 18.5 -> limited = 2400
+                else -> limited = 3000
             }
 
         }
